@@ -10,7 +10,6 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Fizulek - zyjacy nadzieja");
             Program program = new Program();
             program.zad1();
             program.zad2();

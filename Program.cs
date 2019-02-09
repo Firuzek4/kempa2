@@ -15,7 +15,10 @@ namespace ConsoleApp1
             Console.WriteLine("3");
             Console.WriteLine("4");
             Console.WriteLine("5");
+            Console.WriteLine("6");
         }
-        public void test() { }
+        public void test1() { }
+        public void test2() { }
+        public void test3() { }
     }
 }

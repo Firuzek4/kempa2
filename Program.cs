@@ -10,7 +10,10 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
+
             zad1();
+            Console.WriteLine();
+            Console.WriteLine(zad3());
             Console.ReadLine();
         }
 
@@ -91,5 +94,30 @@ namespace ConsoleApp1
             Console.WriteLine("Suma :" + suma);
         }
 
+
+
+        static string zad3() {
+            Console.WriteLine("Podaj lancuch znakowy do zadania 3");
+            string parametrWejsciowy=Console.ReadLine();
+            var task1 = podajLiczbeZnakow(parametrWejsciowy);
+            var task2 = podajSumePrzedzialu();
+            return "Suma znakow : "+task1.GetAwaiter().GetResult().ToString()+"     "+task2.GetAwaiter().GetResult(); 
+
+        }
+        
+
+        static async Task<int> podajLiczbeZnakow(Object o) {
+            string parametr = (String)o;
+            return parametr.Length;
+        }
+        static async Task<int> podajSumePrzedzialu() {
+            int suma = 0;
+            for (int i = 100; i < 1000; i++) {
+                String x = i.ToString();
+                if (x[0] == x[2])
+                    suma = suma + i;
+            }
+            return suma;
+        }
     }
 }

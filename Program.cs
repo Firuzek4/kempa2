@@ -14,6 +14,7 @@ namespace ConsoleApp1
             program.zad1();
             program.zad2();
             program.zad3();
+            Console.WriteLine("Test 1");
             Console.ReadKey();
         }
         public void zad1() {

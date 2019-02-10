@@ -30,6 +30,10 @@ namespace ConsoleApp1
             lista.Add(posumujTab1);
             lista.Add(posumujJednocyfroweTab1);
             Parallel.Invoke(lista.ToArray());
+
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine();
         }
         static void zapelnijTablice1() {
             Random r = new Random();
@@ -94,13 +98,33 @@ namespace ConsoleApp1
             Console.WriteLine("Suma :" + suma);
         }
 
+        static int[,] sprzedarz = new int[5, 12];
 
+        static void zad2() {
+            Console.WriteLine("Zad 2");
+            uzupelnijSprzedaz();
+
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine();
+        }
+        static void uzupelnijSprzedaz() {
+            Random r = new Random();
+            for (int i = 0; i < 5; i++) {
+                for (int y = 0; y < 12; y++) {
+                    sprzedarz[i, y] = r.Next(0, 100);
+                    Console.Write(sprzedarz[i, y]);
+                }
+                Console.WriteLine();
+            }
+        }
 
         static string zad3() {
             Console.WriteLine("Podaj lancuch znakowy do zadania 3");
             string parametrWejsciowy=Console.ReadLine();
             var task1 = podajLiczbeZnakow(parametrWejsciowy);
             var task2 = podajSumePrzedzialu();
+            
             return "Suma znakow : "+task1.GetAwaiter().GetResult().ToString()+"     "+task2.GetAwaiter().GetResult(); 
 
         }
